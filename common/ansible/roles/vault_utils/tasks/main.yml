@@ -11,21 +11,21 @@
     file: vault_init.yaml
     apply:
       tags: [never, vault_init]
-  tags: [never, vault_init]
+  tags: [vault_init]
 
 - name: Unseal vault
   include_tasks:
     file: vault_unseal.yaml
     apply:
-      tags: [never, vault_unseal]
-  tags: [never, vault_unseal]
+      tags: [vault_unseal]
+  tags: [vault_unseal]
 
 - name: Vault secrets init
   include_tasks:
     file: vault_secrets_init.yaml
     apply:
-      tags: [never, vault_secrets_init]
-  tags: [never, vault_secrets_init]
+      tags: [vault_secrets_init]
+  tags: [vault_secrets_init]
 
 - name: Load secrets
   include_tasks:

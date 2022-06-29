@@ -179,6 +179,13 @@ clusterGroup:
       project: golang-external-secrets
       path: charts/datacenter/external-secrets
 
+  imperative:
+    jobs:
+    - name: vaultjob
+      playbook: common/ansible/playbooks/vault/vault.yaml
+      timeout: 360
+      verbosity: "-v"
+
 #  To have apps in multiple flavors, use namespaces and use helm overrides as appropriate
 #
 #  - name: pipelines
